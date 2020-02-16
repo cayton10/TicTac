@@ -21,5 +21,8 @@
     border: 1pt solid brown;
     height: 5rem;
     width: 5rem;
-    
+  }
+
+  a {
+    font-size: 3rem;
   }
