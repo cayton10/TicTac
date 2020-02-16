@@ -3,6 +3,13 @@
   font-family: 'Press Start 2P', cursive;
   font-family: 'Julius Sans One', sans-serif;*/
 
+  body{
+    background: #5999B3;
+  }
+  .container{
+    background: #98E2FF; /* BASE COLOR HERE */
+    box-shadow: 0 4px 80px 1rem rgba(150, 150, 150, 0.667), 0 6px 20px 0 #5999B3 ;
+  }
 
   /*Game title text*/
   .title{
@@ -14,6 +21,7 @@
 
   .row.site-title{
     padding: 20px 0;
+    background: #98E2FF;
   }
 
   .square{
