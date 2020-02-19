@@ -39,6 +39,9 @@ h2{
       margin-bottom: 2vh;
     }
 
+    .row.player {
+      margin-top: 2vh;
+    }
   }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -53,6 +56,10 @@ h2{
 
     .row.site-title{
       margin-bottom: 3vh;
+    }
+
+    .row.player {
+      margin-top: 3vh;
     }
   }
 
@@ -69,6 +76,10 @@ h2{
     .row.site-title{
       margin-bottom: 4vh;
     }
+
+    .row.player {
+      margin-top: 4vh;
+    }
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
@@ -83,6 +94,10 @@ h2{
 
     .row.site-title{
       margin-bottom: 5vh;
+    }
+
+    .row.player {
+      margin-top: 5vh;
     }
   }
 
