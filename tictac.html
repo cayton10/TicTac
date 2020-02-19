@@ -7,8 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- GOOGLE FONTS -->
-        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Monoton|Poiret+One|Press+Start+2P&display=swap" rel="stylesheet">
-        <!-- BOOTSTRAP CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Unica+One&display=swap" rel="stylesheet">        <!-- BOOTSTRAP CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <!-- FONT AWESOME FOR SOCIAL ICONS -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -36,7 +35,7 @@
             <!-- GAME BOARD DIVS -->
             <div class="game-board">
                 <div class="row game-board top-row justify-content-center">
-                    <div class="col-10 col-md-6 d-inline-flex justify-content-center">
+                    <div class="col-12 d-inline-flex justify-content-center">
                         <div class="square" data-aos="fade-up" data-aos-delay="300">
 
                         </div>
@@ -49,7 +48,7 @@
                     </div>
                 </div>
                 <div class="row game-board mid-row justify-content-center">
-                    <div class="col-10 col-md-6 d-inline-flex justify-content-center">
+                    <div class="col-12 d-inline-flex justify-content-center">
                         <div class="square" data-aos="fade-up" data-aos-delay="600">
 
                         </div>
@@ -62,7 +61,7 @@
                     </div>
                 </div>
                 <div class="row game-board bot-row justify-content-center">
-                    <div class="col-10 col-md-6 d-inline-flex justify-content-center">
+                    <div class="col-12 d-inline-flex justify-content-center">
                         <div class="square" data-aos="fade-up" data-aos-delay="750">
 
                         </div>
@@ -78,10 +77,10 @@
             <!-- END GAME BOARD -->
             <!-- PLAYER NAMES -->
             <div class="row player justify-content-between"> 
-                <div class="col-4 justify-content-center text-center">
+                <div class="col-6 justify-content-center text-center">
                     <h2>Player</h2>
                 </div>
-                <div class="col-4 justify-content-center text-center">
+                <div class="col-6 justify-content-center text-center">
                     <h2>Opponent</h2>
                 </div>
             </div>
@@ -98,34 +97,37 @@
                     <h4>Wins: <span id="opponent-score">0</span></h2>
                 </div>
             </div>
+    </div> 
             <!-- END SCORE COUNTERS / FANCY BOX -->
         </main>
-        <footer>
-            <hr>
+        <footer class='row-fluid'>
             <!-- SOCIAL LINKS IN FOOTER -->
-            <div class="row align-items-center justify-content-between">
-                <div class="col-4">
-                    <ul class="social d-inline">
-                        <li class="d-inline">
-                            <a href="https://www.linkedin.com/in/bencayton/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                        </li>
-                        <li class="d-inline">
-                            <a href="https://github.com/cayton10" target="_blank"><i class="fa fa-github-square"></i></a>
-                        </li>
-                        <li class="d-inline">
-                            <a href="https://twitter.com/BenCayton" target="_blank"><i class="fa fa-twitter-square"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-4 text-center">
-                    <p>&copy; <span id="copyrightYear">0</span> - BPC</p>
-                </div>
-                <div class="col-4">
-
+            <div class="col-12 text-center">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="social d-inline">
+                                <li class="d-inline">
+                                    <a href="https://www.linkedin.com/in/bencayton/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                </li>
+                                <li class="d-inline">
+                                    <a href="https://github.com/cayton10" target="_blank"><i class="fa fa-github-square"></i></a>
+                                </li>
+                                <li class="d-inline">
+                                    <a href="https://twitter.com/BenCayton" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>&copy; <span id="copyrightYear">0</span> - BPC</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <hr>
-        </footer>      
+        </footer>
+         
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

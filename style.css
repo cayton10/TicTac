@@ -1,19 +1,17 @@
-/*font-family: 'Poiret One', cursive;
-  font-family: 'Monoton', cursive;
-  font-family: 'Press Start 2P', cursive;
-  font-family: 'Julius Sans One', sans-serif;*/
 
-  body{
-    background: #5999B3;
-  }
-  .container{
-    background: #98E2FF; /* BASE COLOR HERE */
-    box-shadow: 0 4px 80px 1rem rgba(150, 150, 150, 0.667), 0 6px 20px 0 #5999B3 ;
-  }
+/* ------------------------------ text styling ------------------------------ */
+h1,h2,h3,h4,h5,p{
+  font-family:'Unica One', Arial, Helvetica, sans-serif, cursive;
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: bold;
+}
 
   /*Game title text*/
   .title{
-      font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Unica One', cursive;
       font-size: 4rem;
       font-weight: bold;
       color:rgba(198, 106, 255, 0.725);
@@ -22,15 +20,125 @@
   .row.site-title{
     padding: 20px 0;
     background: #98E2FF;
+    margin-bottom: 20px;
   }
 
-  .square{
+/* ---------------------- MEDIA QUERY BP FOR GAME BOARD --------------------- */
+
+    /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .square{
+      background: grey;
+      border: 1pt solid brown;
+      width: 20vw;
+      height: 20vw;
+      padding: 0;
+    }
+
+    .row.site-title{
+      margin-bottom: 2vh;
+    }
+
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .square{
+      background: grey;
+      border: 1pt solid brown;
+      width: 20vw;
+      height: 20vw;
+      padding: 0;
+    }
+
+    .row.site-title{
+      margin-bottom: 3vh;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .square{
+      background: grey;
+      border: 1pt solid brown;
+      width: 15vw;
+      height: 15vw;
+      padding: 0;
+    }
+
+    .row.site-title{
+      margin-bottom: 4vh;
+    }
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .square{
+      background: grey;
+      border: 1pt solid brown;
+      width: 15vw;
+      height: 15vw;
+      padding: 0;
+    }
+
+    .row.site-title{
+      margin-bottom: 5vh;
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .square{
+      background: grey;
+      border: 1pt solid brown;
+      width: 10vw;
+      height: 10vw;
+      padding: 0;
+    }
+
+    .row.site-title{
+      margin-bottom: 5vh;
+    }
+  }
+  
+  
+  /*.square{
     background: grey;
     border: 1pt solid brown;
-    height: 5rem;
-    width: 5rem;
-  }
+    width: 20vw;
+    height: 20vw;
+    padding: 0;
+  }*/
 
   a {
     font-size: 3rem;
   }
+
+  .masthead{
+    padding: 2rem 0;
+  }
+
+  #opponent{
+    overflow: hidden;
+  }
+
+/* ------------------------------ STYLE FOOTER ------------------------------ */
+footer {
+  bottom: 0;
+  height: 80px;
+  position: absolute;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+}
+
+li{
+  padding: 0px 3px;
+}
+
+hr {
+  border: 2px solid black;
+}
+
