@@ -1,15 +1,26 @@
+/* ------------------- ANIMATE ON SCROLL PLUGIN INITIALIZE ------------------ */
+
 AOS.init({
     once: true
-  })
+  });
+
+/* ---------------------------- ON DOCUMENT LOAD ---------------------------- */
 
   $(document).ready(function()
   {
-    
-    /*LIFTED THIS FROM https://stackoverflow.com/questions/30139622/how-to-set-a-divs-height-equal-to-that-divs-width*/
-    //GRABS width of .square class divs and applies that value to height to maintain apsect ratio. 
 
-    $('.square').height(function(){
-      return $(this).width();
-    });
+/* ------------------------- ANIMATIONS ON PAGE LOAD ------------------------ */
+
+    $(".container-fluid").hide(0).fadeIn(1200);
+
+    //Footer dynamic year update
+    document.getElementById('copyrightYear').innerHTML = new Date().getFullYear();
+
+/* --------------------------- mouse over squares --------------------------- */
+
+
+/* ---------------------------- ON CLICK ADD PLAY --------------------------- */
+    $('.square').on(click, )
+
 
   });

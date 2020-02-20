@@ -19,7 +19,7 @@
         
     </head>
     <body>
-    <div class="container">
+    <div class="container-fluid">
         <!-- ANIMATE GAME TITLE TO SLIDE INTO WINDOW-->
         <header>
             <div class="row site-title">
@@ -87,13 +87,13 @@
             <!-- END PLAYER NAMES-->
             <!-- SCORE COUNTER / FANCY BOX -->
             <div class="row score-counter justify-content-around">
-                <div class="col-4 justify-content-center text-center">
+                <div class="col-4 justify-content-center text-center score-box">
                     <h4>Wins: <span id="player-score">0</span></h2>
                 </div>
-                <div class="col-4 justify-content-center text-center">
+                <div class="col-2 justify-content-center text-center cat-score-box">
                     <h4>CAT: <span id="cat-record">0</span></h4>
                 </div>
-                <div class="col-4 justify-content-center text-center">
+                <div class="col-4 justify-content-center text-center score-box">
                     <h4>Wins: <span id="opponent-score">0</span></h2>
                 </div>
             </div>
@@ -106,6 +106,7 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-12">
+                        <hr class='col-8'>
                             <ul class="social d-inline">
                                 <li class="d-inline">
                                     <a href="https://www.linkedin.com/in/bencayton/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
@@ -121,7 +122,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 text-center">
-                            <p>&copy; <span id="copyrightYear">0</span> - BPC</p>
+                            <p><span class="copy">&copy;</span> <span id="copyrightYear">0</span> - BPC</p>
                         </div>
                     </div>
                 </div>
