@@ -45,19 +45,20 @@ var countTurn = 0;
                 $(this).addClass('x');
                 //APPEND USER CHOICE TO USERCHOICES ARRAY
                 userChoices.push($('.square').index($(this)));
-                console.log(userChoices);
+
                 countTurn ++;
-                console.log(countTurn);
+ 
 
                 //check winner
                   if(countTurn > 2) 
                   {
 
                   }
-                  console.log(computerChoices);
-            //player turn
-                computerChoice();
-                
+                  
+            //Call computer choice function.
+            //Appends .square index val to computerChoices array
+                computerChoices.push(computerChoice());
+
                 
         }
     });
@@ -68,22 +69,18 @@ var countTurn = 0;
 /* -------------------- COMPUTER RANDOM SQUARE SELECTION -------------------- */
 
   function computerChoice (){
-
+    //countTurn for winner check
     countTurn = 0;
-    computerChoices = [];
     //CHOICE = jQuery array of .squares without class 'x'.
     let choice = $(".square:not(.x,.o)");
+    console.log(choice);
     //computer choice =  
     let compChoice = choice[Math.floor(Math.random() * choice.length)];
 
-    console.log(compChoice);
     //add 'chosen' class to div element
     $(compChoice).addClass('o');
 
     $(compChoice).html("<img class='img-fluid' src='o.png' />");
-    computerChoices = ($(compChoice).index('.square'));
-    return computerChoices
-    console.log(computerChoices);
-    countTurn++;
-    console.log(countTurn)
+    return $(compChoice).index('.square'); 
+    
   };
