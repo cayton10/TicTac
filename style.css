@@ -1,3 +1,10 @@
+/* ---------------------------- adobe color theme --------------------------- */
+/* Color Theme Swatches in Hex */
+.My-Color-Theme-1-hex { color: #50B379; }
+.My-Color-Theme-2-hex { color: #A6FFCB; }
+.My-Color-Theme-3-hex { color: #8DFFBC; }
+.My-Color-Theme-4-hex { color: #B3463E; }
+.My-Color-Theme-5-hex { color: #FF948C; }
 
 /* ------------------------------ text styling ------------------------------ */
 h1,h2,h3,h4,h5,p{
@@ -25,19 +32,15 @@ h2{
   background: #A6FFCB;
 }
 
+.row.site-title{
+  padding: 20px 0;
 
-  /*Game title text*/
- /* .title{
-      font-size: 4rem;
-      font-weight: bold;
-      color: #B3463E;
-  }*/
+  margin-bottom: 20px;
+}
 
-  .row.site-title{
-    padding: 20px 0;
-
-    margin-bottom: 20px;
-  }
+.square {
+  background: #f2f3f4;
+}
 
 /* ---------------------- MEDIA QUERY BreakPoints FOR GAME BOARD --------------------- */
 
@@ -50,7 +53,6 @@ h2{
 /* ---------------------------- game board sizing --------------------------- */
 
     .square{
-      background: grey;
       border: 1pt solid brown;
       width: 20vw;
       height: 20vw;
@@ -97,7 +99,7 @@ h2{
 
   @media only screen and (min-width: 600px) {
     .square{
-      background: grey;
+
       border: 1pt solid brown;
       width: 20vw;
       height: 20vw;
@@ -108,9 +110,7 @@ h2{
       margin-bottom: 3vh;
     }
 
-    .row.player {
-      margin-top: 3vh;
-    }
+
   }
 
 /* -------------------------------------------------------------------------- */
@@ -119,7 +119,7 @@ h2{
 
   @media only screen and (min-width: 768px) {
     .square{
-      background: grey;
+
       border: 1pt solid brown;
       width: 15vw;
       height: 15vw;
@@ -148,7 +148,7 @@ h2{
 
   @media only screen and (min-width: 992px) {
     .square{
-      background: grey;
+
       border: 1pt solid brown;
       width: 15vw;
       height: 15vw;
@@ -170,7 +170,7 @@ h2{
 
   @media only screen and (min-width: 1200px) {
     .square{
-      background: grey;
+
       border: 1pt solid brown;
       width: 150px;
       height: 150px;
@@ -212,6 +212,11 @@ h2{
     overflow: hidden;
   }
 
+  .game-board{
+    background: #50B379;
+    padding: 20px 0px;
+  }
+
 /* ------------------------------ STYLE FOOTER ------------------------------ */
 
 html{
@@ -219,12 +224,12 @@ html{
   position: relative;
 }
 .container-fluid{
-  margin-bottom: 140px;
+  margin-bottom: 130px;
 }
-
+  
 footer {
   bottom: 0;
-  height: 150px;
+  height: 130px;
   position: absolute;
   width: 100%;
 }
