@@ -50,13 +50,13 @@ var winner;
             //player turn
                 $(this).html("<img class='img-fluid' src='x.png' />");
                 $(this).addClass('x');
-                //APPEND USER CHOICE TO USERCHOICES ARRAY
+                //APPEND square index TO USERCHOICES ARRAY
                 userChoices.push($('.square').index($(this)));
 
                 countTurn ++;
  
 
-                //check winner
+                //After 2 turns, Check for winner
                   if(countTurn > 2) 
                   {
                     checkWinner();
@@ -110,29 +110,20 @@ function checkWinner(){
   //Iterate through userChoices array  
     for(var x = 0; x < userChoices.length; x++){
       //Since arrays are sorted, extraneous or negligable to win values are ignored with the setup below
-      if(winCondition[i][0] == userChoices[0] && winCondition[i][1] == userChoices[1] && winCondition[i][2] && userChoices[2]){
+        if ($.inArray(userChoices[x]), winCondition[i] > -1){
         winner = "player";
+        alert('you won')
         console.log('you won');
         console.log(winCondition[i], userChoices);
         console.log(countTurn);
-      } else if (countTurn > 8){
+      } else if (countTurn >= 9){
         winner = "Ted Nugent";
         console.log('Ted Nugent');
       } else {
-        break;
+        console.log(winCondition[i], userChoices);
       }
     }
   }
-  //Iterate through win condition array
-  for (var i = 0; i < winCondition.length; i++){
-    //Check win condition first, computer selections second.
-    //Iterate through computerChoices array
-      for(var x = 0; x < computerChoices.length; x++){
-        if (winCondition[i][0] == computerChoices[0] && winCondition[i][1] == computerChoices[1] && winCondition[i][2] && computerChoices[2]) {
-          winner = "computer";
-      } else {
-        return;
-      }
-    }
-  }
+  
+  
 };
