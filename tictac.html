@@ -36,25 +36,26 @@
             <div class="game-board text-center">
                 <div class="row top-row justify-content-center">
                     <div class="col-12 d-inline-flex justify-content-center">
-                        <div class="square" data-aos="fade-up" data-aos-delay="300"></div> <!-- NO SPACE BETWEEN OPEN AND CLOSE OF DIVS-->
-                        <div class="square" data-aos="fade-up" data-aos-delay="400"></div>
-                        <div class="square" data-aos="fade-up" data-aos-delay="500"></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="300" id='zero'></div> <!-- NO SPACE BETWEEN OPEN AND CLOSE OF DIVS-->
+                        <div class="square" data-aos="fade-up" data-aos-delay="400" id='one'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="500" id='two'></div>
                     </div>
                 </div>
                 <div class="row mid-row justify-content-center">
                     <div class="col-12 d-inline-flex justify-content-center">
-                        <div class="square" data-aos="fade-up" data-aos-delay="600"></div>
-                        <div class="square" data-aos="fade-up" data-aos-delay="650"></div>
-                        <div class="square" data-aos="fade-up" data-aos-delay="700"></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="600" id='three'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="650" id='four'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="700" id='five'></div>
                     </div>
                 </div>
                 <div class="row bot-row justify-content-center">
                     <div class="col-12 d-inline-flex justify-content-center">
-                        <div class="square" data-aos="fade-up" data-aos-delay="750"></div>
-                        <div class="square" data-aos="fade-up" data-aos-delay="800"></div>
-                        <div class="square" data-aos="fade-up" data-aos-delay="850"></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="750" id='six'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="800" id='seven'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="850" id='eight'></div>
                     </div>
                 </div>
+                <button id='reset'>Reset</button>
             </div>
             <!-- END GAME BOARD -->
             <!-- PLAYER NAMES -->
@@ -62,6 +63,7 @@
                 <div class="col-6 justify-content-center text-center">
                     <h2>Player</h2>
                 </div>
+                
                 <div class="col-6 justify-content-center text-center">
                     <h2>Opponent</h2>
                 </div>

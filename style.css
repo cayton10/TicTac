@@ -42,6 +42,12 @@ h2{
   background: #f2f3f4;
 }
 
+#reset {
+  margin-top: 10px;
+  background: #FF948C;
+  font-family: 'Unica One', Arial, Helvetica, sans-serif, cursive;
+}
+
 /* ---------------------- MEDIA QUERY BreakPoints FOR GAME BOARD --------------------- */
 
 /* -------------------------------------------------------------------------- */
