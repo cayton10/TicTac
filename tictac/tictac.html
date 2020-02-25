@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tic Tac Toe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- GOOGLE FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Unica+One&display=swap" rel="stylesheet">        <!-- BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- FONT AWESOME FOR SOCIAL ICONS -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- DATA AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+
+        
+    </head>
+    <body>
+    <div class="container-fluid">
+        <!-- ANIMATE GAME TITLE TO SLIDE INTO WINDOW-->
+        <header>
+            <div class="row site-title">
+                <div class="col-12 d-inline-flex justify-content-around" id="site-title">
+                    <h1 class="title" data-aos="fade-left" data-aos-delay="400">Tic</h1>
+                    <h1 class="title" data-aos="fade-left" data-aos-delay="600">Tac</h1>
+                    <h1 class="title" data-aos="fade-left" data-aos-delay="800">Toe</h1>
+                </div>
+            </div>
+        </header>
+        <!-- GAME CONTAINER -->
+        <main>
+            <!-- GAME BOARD DIVS -->
+            <div class="game-board text-center">
+                <div class="row top-row justify-content-center">
+                    <div class="col-12 d-inline-flex justify-content-center">
+                        <div class="square" data-aos="fade-up" data-aos-delay="300" id='zero'></div> <!-- NO SPACE BETWEEN OPEN AND CLOSE OF DIVS-->
+                        <div class="square" data-aos="fade-up" data-aos-delay="400" id='one'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="500" id='two'></div>
+                    </div>
+                </div>
+                <div class="row mid-row justify-content-center">
+                    <div class="col-12 d-inline-flex justify-content-center">
+                        <div class="square" data-aos="fade-up" data-aos-delay="600" id='three'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="650" id='four'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="700" id='five'></div>
+                    </div>
+                </div>
+                <div class="row bot-row justify-content-center">
+                    <div class="col-12 d-inline-flex justify-content-center">
+                        <div class="square" data-aos="fade-up" data-aos-delay="750" id='six'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="800" id='seven'></div>
+                        <div class="square" data-aos="fade-up" data-aos-delay="850" id='eight'></div>
+                    </div>
+                </div>
+                <button id='reset'>Reset</button>
+            </div>
+            <!-- END GAME BOARD -->
+            <!-- PLAYER NAMES -->
+            <div class="row player justify-content-between"> 
+                <div class="col-6 justify-content-center text-center">
+                    <h2>Player</h2>
+                </div>
+                
+                <div class="col-6 justify-content-center text-center">
+                    <h2>Opponent</h2>
+                </div>
+            </div>
+            <!-- END PLAYER NAMES-->
+            <!-- SCORE COUNTER / FANCY BOX -->
+            <div class="row score-counter justify-content-around">
+                <div class="col-4 justify-content-center text-center score-box">
+                    <h4>Wins: <span id="player-score">0</span></h2>
+                </div>
+                <div class="col-2 justify-content-center text-center cat-score-box">
+                    <h4>CAT: <span id="cat-record">0</span></h4>
+                </div>
+                <div class="col-4 justify-content-center text-center score-box">
+                    <h4>Wins: <span id="opponent-score">0</span></h2>
+                </div>
+            </div>
+    </div> 
+            <!-- END SCORE COUNTERS / FANCY BOX -->
+        </main>
+        <footer class='row-fluid'>
+            <!-- SOCIAL LINKS IN FOOTER -->
+            <div class="col-12 text-center">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                        <hr class='col-8'>
+                            <ul class="social d-inline">
+                                <li class="d-inline">
+                                    <a href="https://www.linkedin.com/in/bencayton/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                </li>
+                                <li class="d-inline">
+                                    <a href="https://github.com/cayton10" target="_blank"><i class="fa fa-github-square"></i></a>
+                                </li>
+                                <li class="d-inline">
+                                    <a href="https://twitter.com/BenCayton" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p><span class="copy">&copy;</span> <span id="copyrightYear">0</span> - BPC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+         
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- DATA AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="tictac.js" type="text/JavaScript"></script>
+    <!-- INITIALIZE AOS -->
+    <script>
+        AOS.init();
+      </script>
+    </div>
+    </body>
+</html>
