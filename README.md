@@ -1,5 +1,6 @@
 # TicTac
 jQuery Tic Tac Toe(ish) Project
+https://vigorous-wiles-f533f7.netlify.com/
 
 # jQuery 
 This was my first real project developing with jQuery. I'm enjoying the free flowing functionality with this lib over vanilla jS. The control
