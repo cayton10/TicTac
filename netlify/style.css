@@ -43,28 +43,13 @@ h2{
 }
 
 .square.highlight {
-  background-color:rgba(255, 219, 219, 0.77);
+  background-color:rgba(126, 49, 43, 0.441);
 }
 
 #reset {
   margin-top: 10px;
   background: #FF948C;
   font-family: 'Unica One', Arial, Helvetica, sans-serif, cursive;
-  transition: all 0.75s ease;
-}
-
-.highlight{
-  box-shadow: 0px 5px 15px 5px #B3463E;
-}
-
-.winning{
-  box-shadow: 0px 5px 15px 5px #B3463E;
-}
-
-
-.disabled-btn{
-  pointer-events: none;
-  opacity: 0.4;
 }
 
 /* ---------------------- MEDIA QUERY BreakPoints FOR GAME BOARD --------------------- */
@@ -124,6 +109,7 @@ h2{
 
   @media only screen and (min-width: 600px) {
     .square{
+
       border: 1pt solid brown;
       width: 20vw;
       height: 20vw;
@@ -143,6 +129,7 @@ h2{
 
   @media only screen and (min-width: 768px) {
     .square{
+
       border: 1pt solid brown;
       width: 15vw;
       height: 15vw;
@@ -183,25 +170,15 @@ h2{
     }
 
     .row.site-title{
-      margin-bottom: 2vh;
+      margin-bottom: 5vh;
     }
 
     .row.player {
-      margin-top: 3vh;
+      margin-top: 5vh;
     }
 
     .title{
       font-size: 4.5rem;
-    }
-    h2{
-      font-size: 3rem;
-    }
-    h4{
-      font-size: 1.5rem;
-    }
-
-    #reset{
-      font-size: 1.3rem;
     }
   }
 
@@ -229,26 +206,16 @@ h2{
 /*                              END MEDIA QUERIES                             */
 /* -------------------------------------------------------------------------- */
 
-  .pscore-box{
+  .score-box{
     background: #FF948C;
     padding: 10px;
-    transition: all 0.75s ease;
-  }
-
-  .cat-box{
-    background: #FF948C;
-    padding: 10px;
-    transition: all 0.75s ease;
-  }
-
-  .cscore-box{
-    background: #FF948C;
-    padding: 10px;
-    transition: all 0.75s ease;
-  }
-  .winning{
     box-shadow: 0px 5px 15px 5px #B3463E;
-    transition: all 0.75s ease;
+  }
+
+  .cat-score-box{
+    background: #FF948C;
+    padding: 10px;
+    box-shadow: 0px 5px 15px 5px #B3463E;
   }
 
   a {
@@ -276,10 +243,6 @@ html{
 }
 .container-fluid{
   margin-bottom: 130px;
-}
-
-.fa {
-  color: #B3463E;
 }
   
 footer {
