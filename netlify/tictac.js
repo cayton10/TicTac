@@ -4,14 +4,15 @@ AOS.init({
     once: true
   });
 
-
-
 /* ---------------------------- global variables ---------------------------- */
 var winCondition = [[0,1,2], [0,3,6], [0,4,8], [1,4,7], [2,4,6], [2,5,8], [3,4,5], [6,7,8]];
 var userChoices = [];
 var computerChoices = [];
 var countTurn = 0;
 var winner = '';
+var playerScore = 0;
+var compScore = 0;
+var catScore = 0;
 /* -------------------------------------------------------------------------- */
 /*                              ON DOCUMENT LOAD                              */
 /* -------------------------------------------------------------------------- */
@@ -34,13 +35,7 @@ var winner = '';
       $('.square').removeClass('highlight');
     });
       
-    
 
-
-
-    
-
-/* ---------------------------- declare variables --------------------------- */
 
 
 
@@ -58,13 +53,7 @@ var winner = '';
                 $(this).addClass('x');
                 //APPEND square index TO USERCHOICES ARRAY
                 userChoices.push($('.square').index($(this)));
-
-                countTurn ++;
- 
-
-                
-
-                  
+                countTurn ++;   
             //Call computer choice function.
             //Appends .square index val to computerChoices array
                 computerChoices.push(computerChoice());
@@ -74,10 +63,11 @@ var winner = '';
                 {
                   checkWinner();
                 }
-
+                //If winner isn't empty, alert winner
                 if(winner !== ''){
                   alert(winner);
                 }
+                highlight();
                 
         }
     });
@@ -108,33 +98,7 @@ var winner = '';
 /*                            CHECK WINNER FUNCTION                           */
 /* -------------------------------------------------------------------------- */
 function checkWinner(){
-  
-
-  //var result = '';
-  //var userCounter = 0;
-  
-  //Iterate through win condition array
-  /*for (var i = 0; i < winCondition.length; i++ ){
-  //Checks winCondition first, player selections second.
-  //Iterate through userChoices array  
-    for(var x = 0; x < userChoices.length; x++){
-      result = $.inArray(userChoices[x], winCondition[i]);
-      console.log(userChoices[x] + 'userChoice' + winCondition[i])
-      console.log('result: ' + result);
-      //First control flow: Increment userCounter if userChoices are found within winCondition array. 
-      if (result !== -1) {
-        userCounter++;
-        console.log("userCounter: " + userCounter);
-      }  
-      if (userCounter == 3) {
-        alert('You win!');
-        break;
-      }
-       };
-      };
-
-      
-*/  
+   
       //outline all win conditions. Tried other methods. Really wanted to use array comparison, but couldn't
       //find a way to make it happen. 
       //Win conditions for 'x' player
@@ -149,6 +113,9 @@ function checkWinner(){
       ) {
         winner = 'You won!';
         $("#player-score").html(parseInt($("#player-score").html(), 10)+1);
+        $('.square').addClass('disabled-btn');
+        $('#reset').addClass('highlight');
+        playerScore++;
       //Win conditions for 'o' player
       } else if ($('#zero').hasClass('o') && $('#one').hasClass('o') && $('#two').hasClass('o') || 
                 $('#three').hasClass('o') && $('#four').hasClass('o') && $('#five').hasClass('o') ||
@@ -161,11 +128,18 @@ function checkWinner(){
       ) {
            winner = 'Computer won!';
            $("#opponent-score").html(parseInt($("#opponent-score").html(), 10)+1);
+           $('.square').addClass('disabled-btn');
+           $('#reset').addClass('highlight');
+           compScore++;
            //If board is full with no win conditions outlined above
        } else if(countTurn >= 9){
          alert('Cat scratch fever.');
+         catScore++;
          //Add to cat-record score
          $("#cat-record").html(parseInt($("#cat-record").html(), 10)+1);
+         $('.square').addClass('disabled-btn');
+         $('#reset').addClass('highlight');
+
        }
 
     };
@@ -180,8 +154,28 @@ $("body").on("click", "#reset", function()
         //remove x & o classes from divs
         $('.square').removeClass('x');
         $('.square').removeClass('o');
+        $('.square').removeClass('disabled-btn');
+        $('#reset').removeClass('highlight');
         //reset turn counter
         countTurn = 0;
         //reset winner
         winner = '';
     });
+
+/* ---------------------------- HIGHLIGHT WINNER ---------------------------- */
+  function highlight(){
+
+  if (playerScore > compScore ) {
+    $('.pscore-box').addClass('winning');
+    $('.cscore-box').removeClass('winning');
+    $('.cat-box').removeClass('winning');
+  } else if (compScore > playerScore) {
+    $('.cscore-box').addClass('winning');
+    $('.pscore-box').removeClass('winning');
+    $('.cat-box').removeClass('winning');
+  } else if (catScore > playerScore && catScore > compScore){
+    $('.cat-box').addClass('winning');
+    $('.pscore-box').removeClass('winning');
+    $('.cscore-box').removeClass('winning');
+  }
+};
