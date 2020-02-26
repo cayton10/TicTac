@@ -165,11 +165,11 @@ $("body").on("click", "#reset", function()
 /* ---------------------------- HIGHLIGHT WINNER ---------------------------- */
   function highlight(){
 
-  if (playerScore > compScore ) {
+  if (playerScore > compScore && playerScore > catScore) {
     $('.pscore-box').addClass('winning');
     $('.cscore-box').removeClass('winning');
     $('.cat-box').removeClass('winning');
-  } else if (compScore > playerScore) {
+  } else if (compScore > playerScore && compScore > catScore) {
     $('.cscore-box').addClass('winning');
     $('.pscore-box').removeClass('winning');
     $('.cat-box').removeClass('winning');
@@ -177,5 +177,9 @@ $("body").on("click", "#reset", function()
     $('.cat-box').addClass('winning');
     $('.pscore-box').removeClass('winning');
     $('.cscore-box').removeClass('winning');
+  } else {
+    $('.pscore-box').removeClass('winning');
+    $('.cscore-box').removeClass('winning');
+    $('.cat-box').removeClass('winning');
   }
 };
